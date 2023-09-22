@@ -45,3 +45,5 @@ out/
 /src/test/java/models/lombok/LoginBodyLombokModel.java
 /src/test/java/specs/LoginSpec.java
 /src/test/java/tests/decomposition_ui/CreateTestcaseTests.java
+/src/test/java/tests/rshb/ReqresInExtendedTests.java
+/src/test/java/tests/rshb/SelenoidTests.java
