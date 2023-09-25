@@ -13,7 +13,7 @@ public class ApiSpec {
     public static RequestSpecification simpleRequestSpecification = with()
             .filter(withCustomTemplates())
             .log().uri()
-            .baseUri("https://www.naumen.ru");
+            .baseUri("https://www.rshb.ru");
 
     public static ResponseSpecification simpleResponseSpecification = new ResponseSpecBuilder()
             .log(STATUS)

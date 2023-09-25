@@ -27,10 +27,10 @@ public class MainPageApiTests {
 
     @Test
     @Tag("api")
-    void checkMainPageLinkProducts() {
+    void checkMainPageLinkNatural() {
         Response response = step("Make get request", () ->
                 given(simpleRequestSpecification)
-                        .basePath("/products/")
+                        .basePath("/natural")
                         .get()
                         .then()
                         .spec(simpleResponseSpecification)
@@ -42,10 +42,10 @@ public class MainPageApiTests {
 
     @Test
     @Tag("api")
-    void checkMainPageLinkSupport() {
+    void checkMainPageLinkBusiness() {
         Response response = step("Make get request", () ->
                 given(simpleRequestSpecification)
-                        .basePath("/support/")
+                        .basePath("/business")
                         .get()
                         .then()
                         .spec(simpleResponseSpecification)
@@ -57,10 +57,10 @@ public class MainPageApiTests {
 
     @Test
     @Tag("api")
-    void checkMainPageLinkClients() {
+    void checkMainPageLinkFarmers() {
         Response response = step("Make get request", () ->
                 given(simpleRequestSpecification)
-                        .basePath("/clients/")
+                        .basePath("/farmers")
                         .get()
                         .then()
                         .spec(simpleResponseSpecification)
@@ -72,10 +72,10 @@ public class MainPageApiTests {
 
     @Test
     @Tag("api")
-    void checkMainPageLinkPartners() {
+    void checkMainPageLinkSvoe() {
         Response response = step("Make get request", () ->
                 given(simpleRequestSpecification)
-                        .basePath("/partners/")
+                        .basePath("/svoe")
                         .get()
                         .then()
                         .spec(simpleResponseSpecification)
@@ -87,40 +87,10 @@ public class MainPageApiTests {
 
     @Test
     @Tag("api")
-    void checkMainPageLinkCompany() {
+    void checkMainPageLinkAbout() {
         Response response = step("Make get request", () ->
                 given(simpleRequestSpecification)
-                        .basePath("/company/")
-                        .get()
-                        .then()
-                        .spec(simpleResponseSpecification)
-                        .extract().response());
-
-        step("Verification statusCode", () ->
-                assertThat(response.statusCode()).isEqualTo(200));
-    }
-
-    @Test
-    @Tag("api")
-    void checkMainPageLinkNews() {
-        Response response = step("Make get request", () ->
-                given(simpleRequestSpecification)
-                        .basePath("/events/news/")
-                        .get()
-                        .then()
-                        .spec(simpleResponseSpecification)
-                        .extract().response());
-
-        step("Verification statusCode", () ->
-                assertThat(response.statusCode()).isEqualTo(200));
-    }
-
-    @Test
-    @Tag("api")
-    void checkMainPageLinkCareer() {
-        Response response = step("Make get request", () ->
-                given(simpleRequestSpecification)
-                        .basePath("/events/news/")
+                        .basePath("/about")
                         .get()
                         .then()
                         .spec(simpleResponseSpecification)

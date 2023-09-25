@@ -72,6 +72,7 @@ public class BaseTest {
             browser = browserLocalConfig.getBrowserLocalType();
             browserVersion = browserLocalConfig.getBrowserLocalVersion();
             browserSize = browserLocalConfig.getBrowserLocalSize();
+//            holdBrowserOpen = true;
         }
     }
 

@@ -3,100 +3,85 @@ package tests.rshb;
 import org.junit.jupiter.api.*;
 import pages.*;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 public class MainPageTest extends BaseTest {
 
     MainPage mainPage = new MainPage();
-    ProductsPage productsPage = new ProductsPage();
-    ServicesPage servicesPage = new ServicesPage();
-    ClientsPage clientsPage = new ClientsPage();
-    PartnersPage partnersPage = new PartnersPage();
-    AboutPage aboutPage = new AboutPage();
-    PressCenterPage pressCenterPage = new PressCenterPage();
-    CareerPage careerPage = new CareerPage();
+    NaturalPage naturalPage = new NaturalPage();
+    NaturalLoansPage naturalLoansPage = new NaturalLoansPage();
 
     @Test
     @Tag("ui")
-    @DisplayName("Проверка в меню ссылки 'Продукты'")
-    void checkingLinkMenuProducts() {
-        mainPage.openPage()
-                .clickProductsMenu();
-        productsPage
-                .checkingPageLoadingProducts();
-    }
+    @DisplayName("Проверка страницы: 'Кредиты'")
+    void creditsDifferentiated() {
+    /*
+    1. Тест-кейс 1
+        - Зайти на сайт rshb.ru
+        - Кликнуть «Частным клиентам»
+        - Кликнуть «Кредиты»
+       Рассчитать кредит
+        - тип платежа «Дифференцированный»
+        - сумма кредита 1 500 000 р
+        - Срок кредита 30 м
+        - кликнуть чекбоксы "Получаю зарплату на счёт в россельхозбанке" и
+        "Комплексная страховая защита"
+        - Сравнить что ставка = 15.5%, а ежемесячный платеж = 69 375 ₽
+    */
 
-    @Test
-    @Tag("ui")
-    @DisplayName("Проверка в меню ссылки 'Услуги'")
-    void checkingLinkMenuServices() {
-        mainPage.openPage()
-                .clickServicesMenu();
-        servicesPage
-                .checkingPageLoadingServices();
-    }
+        mainPage
+                .openPage()
+                .clickPrivateClients();
+        naturalPage
+                .clickCredits();
+        naturalLoansPage
+                .clickButtonInformationCookies()
+                .clickRadioButtonDifferentiated()
+                .setLoanAmountDifferentiated()
+                .setMonthDifferentiated()
+                .setCheckBoxSalaryInBank()
+                .setCheckBoxInsurance();
 
-    @Test
-    @Tag("ui")
-    @DisplayName("Проверка в меню ссылки 'Клиенты'")
-    void checkingLinkMenuClients() {
-        mainPage.openPage()
-                .clickClientsMenu();
-        clientsPage
-                .checkingPageLoadingClients();
-    }
+        naturalLoansPage
+                .checkRadioButtonAnnuitant()
+                .checkPercentDifferentiated()
+                .checkMonthlyPaymentDifferentiated();
 
-    @Test
-    @Tag("ui")
-    @DisplayName("Проверка в меню ссылки 'Партнеры'")
-    void checkingLinkMenuPartners() {
-        mainPage.openPage()
-                .clickPartnersMenu();
-        partnersPage
-                .checkingPageLoadingPartners();
     }
 
     @Test
     @Tag("ui")
-    @DisplayName("Проверка в меню ссылки 'О НАС'")
-    void checkingLinkMenuAbout() {
-        mainPage.openPage()
-                .clickAboutMenu();
-        aboutPage
-                .checkingPageLoadingAbout();
-    }
+    @DisplayName("")
+    void creditsAnnuity() {
+    /*
+    1. Тест-кейс 1
+        - Зайти на сайт rshb.ru
+        - Кликнуть «Частным клиентам»
+        - Кликнуть «Кредиты»
+       Рассчитать кредит
+        - тип платежа «Аннуитетный»
+        - сумма кредита 2 500 000 р
+        - Срок кредита 40 м
+        - кликнуть чекбокс «Получаю зарплату на счёт в россельхозбанке», остальные чекбоксы не должны быть активны
+        - Сравнить что ставка = 15.5%, а ежемесячный платеж = 80 424 ₽
+    */
 
-    @Test
-    @Tag("ui")
-    @DisplayName("Проверка в меню ссылки 'Пресс-центр'")
-    void checkingLinkMenuPressCenter() {
-        mainPage.openPage()
-                .clickPressCenterMenu();
-        pressCenterPage
-                .checkingPageLoadingPressCenter();
-    }
+        mainPage
+                .openPage()
+                .clickPrivateClients();
+        naturalPage
+                .clickCredits();
+        naturalLoansPage
+                .clickButtonInformationCookies()
+                .clickRadioButtonAnnuity()
+                .setLoanAmountAnnuity()
+                .setMonthAnnuity()
+                .setCheckBoxSalaryInBank()
+                .removeCheckBoxInsurance();
 
-    @Test
-    @Tag("ui")
-    @DisplayName("Проверка в меню ссылки 'Карьера'")
-    void checkingLinkMenuCareer() {
-        mainPage.openPage()
-                .clickCareerMenu();
-        careerPage
-                .checkingPageLoadingCareer();
-    }
-
-    @Test
-    @DisplayName("Ложный тест для отображения на диаграмме")
-    void falseTest() {
-        assertThat(false);
-    }
-
-    @Test
-    @Disabled
-    @DisplayName("@Disable тест для отображения на диаграмме")
-    void falseDisableTest() {
-        assertThat(false);
+        naturalLoansPage
+                .checkRadioButtonAnnuitant()
+                .checkPercentAnnuity()
+                .checkMonthlyPaymentAnnuity();
+        
     }
 
 }
