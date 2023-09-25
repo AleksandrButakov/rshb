@@ -8,7 +8,6 @@ import java.net.URL;
 })
 
 public interface WebDriverConfig extends Config {
-
     @Key("webdriver.baseUrl")
     String getWebDriverBaseUrl();
 

@@ -6,7 +6,6 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
 public class MainPage {
-
     private final SelenideElement
             menu_private_clients = $$(".inline-block").findBy(text("Частным клиентам"));
 

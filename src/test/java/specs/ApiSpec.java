@@ -9,7 +9,6 @@ import static io.restassured.RestAssured.with;
 import static io.restassured.filter.log.LogDetail.*;
 
 public class ApiSpec {
-
     public static RequestSpecification simpleRequestSpecification = with()
             .filter(withCustomTemplates())
             .log().uri()

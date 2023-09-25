@@ -22,7 +22,6 @@ import static helpers.AllureAttachments.*;
 import static java.lang.System.*;
 
 public class BaseTest {
-
     @BeforeAll
     static void beforeAll() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());

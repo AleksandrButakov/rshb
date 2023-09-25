@@ -9,7 +9,6 @@ import static constants.Constants.*;
 import static org.assertj.core.api.Assertions.*;
 
 public class NaturalLoansPage {
-
     private final SelenideElement
             buttonInformationCookies = $("div[class^='bg-white m-xl']").$("button[class^='flex']"),
             radioButtonAnnuitant = $$("label[class^='flex']").find(text("Аннуитетный")),

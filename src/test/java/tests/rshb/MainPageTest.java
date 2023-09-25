@@ -4,7 +4,6 @@ import org.junit.jupiter.api.*;
 import pages.*;
 
 public class MainPageTest extends BaseTest {
-
     MainPage mainPage = new MainPage();
     NaturalPage naturalPage = new NaturalPage();
     NaturalLoansPage naturalLoansPage = new NaturalLoansPage();
@@ -81,7 +80,6 @@ public class MainPageTest extends BaseTest {
                 .checkRadioButtonAnnuitant()
                 .checkPercentAnnuity()
                 .checkMonthlyPaymentAnnuity();
-        
     }
 
 }

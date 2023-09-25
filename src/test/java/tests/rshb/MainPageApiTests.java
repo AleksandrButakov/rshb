@@ -10,7 +10,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static specs.ApiSpec.*;
 
 public class MainPageApiTests {
-
     @Test
     @Tag("api")
     void checkMainPage() {
