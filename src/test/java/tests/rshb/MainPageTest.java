@@ -11,7 +11,7 @@ public class MainPageTest extends BaseTest {
 
     @Test
     @Tag("ui")
-    @DisplayName("Проверка страницы: 'Кредиты'")
+    @DisplayName("Проверка страницы: 'Кредиты' дифференцированный платеж")
     void creditsDifferentiated() {
     /*
     1. Тест-кейс 1
@@ -49,7 +49,7 @@ public class MainPageTest extends BaseTest {
 
     @Test
     @Tag("ui")
-    @DisplayName("")
+    @DisplayName("\"Проверка страницы: 'Кредиты' аннуитетный платеж\"")
     void creditsAnnuity() {
     /*
     1. Тест-кейс 1
