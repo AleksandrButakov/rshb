@@ -82,5 +82,4 @@ public class MainPageTest extends BaseTest {
                 .checkMonthlyPaymentAnnuity();
     }
 
-
 }
