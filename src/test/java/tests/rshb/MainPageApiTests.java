@@ -98,5 +98,4 @@ public class MainPageApiTests {
         step("Verification statusCode", () ->
                 assertThat(response.statusCode()).isEqualTo(200));
     }
-
 }

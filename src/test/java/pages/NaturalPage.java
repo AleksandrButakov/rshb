@@ -6,7 +6,6 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 
 public class NaturalPage {
-
     private final SelenideElement
             menu_credits = $("div[class^='container']")
             .$$("span[class^='font-sans']")
@@ -16,5 +15,4 @@ public class NaturalPage {
         menu_credits.click();
         return this;
     }
-
 }

@@ -17,9 +17,8 @@ import java.util.HashMap;
 import static com.codeborne.selenide.Configuration.*;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.sessionId;
-
 import static helpers.AllureAttachments.*;
-import static java.lang.System.*;
+import static java.lang.System.getProperties;
 
 public class BaseTest {
     @BeforeAll
@@ -90,5 +89,4 @@ public class BaseTest {
             closeWebDriver();
         }
     }
-
 }

@@ -1,7 +1,11 @@
 package tests.rshb;
 
-import org.junit.jupiter.api.*;
-import pages.*;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
+import pages.MainPage;
+import pages.NaturalLoansPage;
+import pages.NaturalPage;
 
 public class MainPageTest extends BaseTest {
     MainPage mainPage = new MainPage();
@@ -43,7 +47,6 @@ public class MainPageTest extends BaseTest {
                 .checkRadioButtonAnnuitant()
                 .checkPercentDifferentiated()
                 .checkMonthlyPaymentDifferentiated();
-
     }
 
     @Test
@@ -75,11 +78,9 @@ public class MainPageTest extends BaseTest {
                 .setMonthAnnuity()
                 .setCheckBoxSalaryInBank()
                 .removeCheckBoxInsurance();
-
         naturalLoansPage
                 .checkRadioButtonAnnuitant()
                 .checkPercentAnnuity()
                 .checkMonthlyPaymentAnnuity();
     }
-
 }

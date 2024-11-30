@@ -1,6 +1,6 @@
 package constants;
 
-public class Constants {
+public final class Constants {
     public static final String PERCENT_DIFFERENTIATED = "15,50";
     public static final String MONTHLY_PAYMENT_DIFFERENTIATED = "69 375 ₽";
 
