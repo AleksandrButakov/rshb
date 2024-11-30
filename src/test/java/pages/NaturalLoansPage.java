@@ -4,9 +4,10 @@ import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.Keys;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$$;
 import static constants.Constants.*;
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class NaturalLoansPage {
     private final SelenideElement
@@ -22,7 +23,6 @@ public class NaturalLoansPage {
             checkBoxInsurance = $$("label[class^='flex']").get(1),
             percent = $(".font-mohave"),
             monthlyPayment = $$("span[class^='font-sans text-h3']").get(1);
-
 
     public NaturalLoansPage clickButtonInformationCookies() {
         buttonInformationCookies.click();
@@ -113,7 +113,6 @@ public class NaturalLoansPage {
         return this;
     }
 
-
     public NaturalLoansPage checkRadioButtonAnnuitant() {
         assertThat(radioButtonAnnuitant.isSelected()).isEqualTo(false);
         return this;
@@ -144,5 +143,4 @@ public class NaturalLoansPage {
         assertThat(monthlyPayment.getText()).isEqualTo(MONTHLY_PAYMENT_ANNUITY);
         return this;
     }
-
 }

@@ -15,5 +15,4 @@ public interface BrowserRemoteConfig extends Config {
 
     @Key("browser.remote.size")
     String getBrowserRemoteSize();
-
 }

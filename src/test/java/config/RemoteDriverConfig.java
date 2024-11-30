@@ -15,5 +15,4 @@ public interface RemoteDriverConfig extends Config {
 
     @Key("remote.threads.driver")
     String getRemoteThreadsDriver();
-
 }

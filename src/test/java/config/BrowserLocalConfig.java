@@ -15,5 +15,4 @@ public interface BrowserLocalConfig extends Config {
 
     @Key("browser.local.size")
     String getBrowserLocalSize();
-
 }
